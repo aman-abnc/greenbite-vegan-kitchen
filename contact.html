@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body>
+    
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-green-700">🌱 GreenBite Kitchen</div>
+            <ul class="flex gap-6 font-medium">
+                <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+                <li><a href="menu.html" class="hover:text-green-600">Menu</a></li>
+                <li><a href="story.html" class="hover:text-green-600">Our Story</a></li>
+                <li><a href="contact.html" class="text-green-600 font-semibold">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="px-6 py-12 max-w-4xl mx-auto">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-stone-900 mb-4">Get in Touch / Order Food</h1>
+            <p class="text-stone-600">Have a query or want to place an order? Fill out the form below and we’ll reach out to you instantly.</p>
+        </section>
+
+
+        <section class="bg-white rounded-2xl">
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-2" for="Name">Full Name </label>
+                    <input class="w-full px-4 py-3" type="text" id="name" name="name" required placeholder="Enter Your Name"> 
+                </div>
+
+
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-2" for="phone"> Phone Number </label>
+
+                    <input type="tel" id="phone" name="phone" required class="w-full px-4 px-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="Enter Your Mobile Number">
+                    </div>
+
+
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-stone-700 mb-2">Select Service / Meal</label>
+                        <select id="service" name="service" class="w-full px-4 px-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus-outline-none">
+
+                            <option value="Salad">Avocado Quinoa Salad</option>
+                            <option value="stirfry">Tofu Veggie Stir-Fry</option>
+                            <option value="smoothie">Green Detox Smoothie</option>
+                            <option value="other">General Inquiry / Custom Order</option>
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="message"> Delivery Address / Message </label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Enter your full delivery address or special instructions..."></textarea>
+                    </div>
+
+                    <button type="submit">
+                        Place Order / Send Message
+                    </button>
+            </form>
+
+        </section>
+    </main>
+
+<footer class="bg-stone-900 text-stone-400 py-8 text-center text-sm mt-20">
+        <p>&copy; 2026 GreenBite Vegan Cloud Kitchen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
