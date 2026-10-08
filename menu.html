@@ -1,72 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-stone-50 text-stone-800 font-sans">
-    <header class="bg-white shadow-md sticky top-0 z-100">
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="logo text-xl font-bold text-green-700 flex items-center gap-2">
-                <i class="fa-solid fa-seedling"></i> GreenBite Kitchen
+
+
+    <div class="bg-emerald-800 text-white text-center py-2 text-sm font-medium px-4">
+        <i class="fa-solid fa-seedling"></i> 100% Cruelty-Free | Plant-Based Cloud Kitchen - Good for You, Kind to Animals!
+    </div>
+
+
+    <!--Header-->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-emerald-700 flex items-center gap-2">
+                <i class="fa-solid fa-leaf"></i> GreenBite Vegan
             </div>
-            <ul class="flex gap-6 font-medium">
-                <li><a href="index.html" class="hover:text-green-600">Home</a></li>
-                <li><a href="menu.html" class="text-green-600 font-semibold">Menu</a></li>
-                <li><a href="story.html" class="hover:text-green-600">Our Story</a></li>
-                <li><a href="contact.html" class="hover:text-green-600">Contact Us</a></li>
+            
+    
+            <ul class="hidden md:flex gap-6 font-medium">
+                <li><a href="index.html" class="hover:text-emerald-600 transition">Home</a></li>
+                <li><a href="menu.html" class="text-emerald-700 font-semibold">Menu</a></li>
+                <li><a href="story.html" class="hover:text-emerald-600 transition">Our Story</a></li>
+                <li><a href="contact.html" class="hover:text-emerald-600 transition">Contact Us</a></li>
             </ul>
+
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-stone-700 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-200 px-6 py-4 space-y-3 font-medium">
+        
+            <a href="index.html" class="block hover:text-emerald-600 transition">Home</a>
+            <a href="menu.html" class="block text-emerald-700 font-semibold">Menu</a>
+            <a href="story.html" class="block hover:text-emerald-600 transition">Our Story</a>
+            <a href="contact.html" class="block hover:text-emerald-600 transition">Contact Us</a>
+        </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-12">
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
         <section class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-stone-900 mb-4">Our Plant-Based Menu</h1>
-            <p class="text-lg text-stone-600">100% cruelty-free, organic, and freshly prepared delicious meals.</p>
+            <span class="inline-block bg-emerald-200 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                100% Plant-Powered Goodness
+            </span>
+            <h1 class="text-4xl font-extrabold text-stone-900 mb-4">Our Complete Cruelty-Free Menu</h1>
+            <p class="text-lg text-stone-600 max-w-2xl mx-auto">Explore our wide range of freshly prepared, organic, and ethically crafted dishes that delight your taste buds without harming any animals.</p>
         </section>
 
+        <!-- 9 Items menu -->
         <section class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-6 border border-stone-100">
-                <div class="text-green-600 text-3xl mb-4"><i class="fa-solid fa-bowl-food"></i></div>
-                <h3 class="text-xl font-bold text-stone-900 mb-2">Avocado Quinoa Salad</h3>
-                <p class="text-stone-600 text-sm mb-4">Fresh avocados, organic quinoa, cherry tomatoes with lemon-herb dressing.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-green-700 font-bold text-lg">₹299</span>
-                    <a href="contact.html" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition">Order Now</a>
+            
+            <!-- Item 1: -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                
+                <div class="overflow-hidden">
+                    <img src="https://www.daisybeet.com/wp-content/uploads/2020/01/Quinoa-and-Greens-Salad-2-683x1024.jpg" alt="Avocado Quinoa Salad" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Avocado Quinoa Salad</h3>
+                        <p class="text-stone-600 text-sm mb-4">Fresh avocados, organic quinoa, and cherry tomatoes tossed with a tangy lemon-herb dressing.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹299</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-6 border border-stone-100">
-                <div class="text-green-600 text-3xl mb-4"><i class="fa-solid fa-burger"></i></div>
-                <h3 class="text-xl font-bold text-stone-900 mb-2">Plant-Based Burger</h3>
-                <p class="text-stone-600 text-sm mb-4">Juicy soy patty, vegan cheese, lettuce, and special vegan mayo in a whole wheat bun.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-green-700 font-bold text-lg">₹249</span>
-                    <a href="contact.html" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition">Order Now</a>
+            <!-- Item 2: -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://www.seriouseats.com/thmb/um9ZOLWUqQp7RYQt-k5Woo5UnNY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/20231204-SEA-VeganBurger-FredHardy-00-dbf603c78b694bfd99489b85ab44f4c4.jpg" alt="Plant-Based Burger" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Plant-Based Burger</h3>
+                        <p class="text-stone-600 text-sm mb-4">Juicy soy patty, vegan cheese slice, crisp lettuce, and special vegan mayo in a whole wheat bun.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹249</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-6 border border-stone-100">
-                <div class="text-green-600 text-3xl mb-4"><i class="fa-solid fa-glass-water"></i></div>
-                <h3 class="text-xl font-bold text-stone-900 mb-2">Berry Power Smoothie</h3>
-                <p class="text-stone-600 text-sm mb-4">Almond milk blended with fresh blueberries, strawberries, and chia seeds.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-green-700 font-bold text-lg">₹199</span>
-                    <a href="contact.html" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition">Order Now</a>
+            <!-- Item 3:-->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://www.eatingbirdfood.com/wp-content/uploads/2021/07/vegan-protein-shake-hero-new-678x950.jpg" alt="Berry Power Smoothie" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Berry Power Smoothie</h3>
+                        <p class="text-stone-600 text-sm mb-4">Almond milk blended with fresh blueberries, strawberries, and a sprinkle of organic chia seeds.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹199</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Item 4: -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza-recipe-580x870.jpg" alt="Artisan Vegan Pizza" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Artisan Vegan Pizza</h3>
+                        <p class="text-stone-600 text-sm mb-4">Hand-tossed crust topped with rich tomato marinara, cashew-based mozzarella, and grilled veggies.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹399</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5: -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2020/06/IMG_25462-580x791.jpg" alt="Green Power Buddha Bowl" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Green Power Buddha Bowl</h3>
+                        <p class="text-stone-600 text-sm mb-4">Roasted chickpeas, steamed broccoli, brown rice, avocado, and tahini dressing over a bed of spinach.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹349</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6: -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_960,w_960//InstamartAssets/2/Falafel_Wrap.webp?updatedAt=1730794233000" alt="Spicy Falafel Wrap" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Spicy Falafel Wrap</h3>
+                        <p class="text-stone-600 text-sm mb-4">Crispy baked falafel balls wrapped in whole wheat tortilla with hummus, pickles, and garlic tahini.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹229</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7:-->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://sunkissedkitchen.com/wp-content/uploads/2024/06/Creamy-Tomato-Basil-Soup-5.jpg" alt="Creamy Tomato Basil Soup" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Creamy Tomato Basil Soup</h3>
+                        <p class="text-stone-600 text-sm mb-4">Warm and comforting slow-simmered vine tomatoes blended with cashew cream and fresh basil leaves.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹179</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8:-->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://i0.wp.com/www.hermodernkitchen.com/wp-content/uploads/2019/02/Baking_Bucket_List_Raw_Vegan_Brownie_6.jpg?resize=768%2C1024&ssl=1" alt="Raw Vegan Chocolate Brownie" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Raw Vegan Chocolate Brownie</h3>
+                        <p class="text-stone-600 text-sm mb-4">Guilt-free indulgence made with dates, walnuts, raw cacao, and topped with dark chocolate ganache.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹219</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 9:-->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between group">
+                <div class="overflow-hidden">
+                    <img src="https://www.inspiredtaste.net/wp-content/uploads/2025/11/Green-Juice-Recipe.jpg" alt="Green Detox Cold-Pressed Juice" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Green Detox Cold-Pressed Juice</h3>
+                        <p class="text-stone-600 text-sm mb-4">Refreshing blend of kale, green apple, cucumber, lemon, and a hint of fresh organic ginger.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-emerald-700 font-bold text-lg">₹189</span>
+                        <a href="contact.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 transition">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-stone-900 text-stone-400 py-8 text-center text-sm mt-16">
-        <p>&copy; 2026 GreenBite Vegan Cloud Kitchen. All rights reserved (ABNC).</p>
+        <p>&copy; 2026 GreenBite Vegan Cloud Kitchen. Eating clean, living kindly (ABNC).</p>
     </footer>
+
+
+    <!-- js -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
